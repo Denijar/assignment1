@@ -57,7 +57,7 @@ function DashboardView() {
       <div className={isDarkMode ? "dashboard" : "dashboard light"}>
         <TaskList
           tasks={tasks}
-          onNewTask={triggerRefetchTasks}
+          refetchTasks={triggerRefetchTasks}
           onTaskClick={handleTaskClick}
         />
         <CurrentTask />

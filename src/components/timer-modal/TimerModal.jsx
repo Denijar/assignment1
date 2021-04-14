@@ -32,6 +32,7 @@ export default function TimerModal() {
           userId={currentTask.User_id}
           checked={currentTask.Is_complete}
           subTasks={currentTask.Subtasks}
+          onCheck={() => {}}
         />
         <CurrentTaskNotes notes={[currentTask.Description]} />
       </div>

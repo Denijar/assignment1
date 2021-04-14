@@ -19,6 +19,7 @@ function Task(props) {
     selected,
     expanded,
     subtasks,
+    onCheck,
   } = props;
 
   const [isChecked, setIsChecked] = useState(checked);
@@ -47,8 +48,8 @@ function Task(props) {
       Start_date: startDate,
       Task_id: taskId,
       User_id: userId,
-      Is_complete: isChecked,
-    });
+      Is_complete: newIsChecked,
+    }).then(onCheck());
   };
   const handleIconClick = () => setIsExpanded(!isExpanded);
 

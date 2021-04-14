@@ -124,6 +124,7 @@ function CurrentTask() {
                 checked={currentTask.Is_complete}
                 expanded
                 subtasks={currentTask.Subtasks}
+                onCheck={() => {}}
               />
               <CurrentTaskNotes
                 notes={[currentTask.Description]}
