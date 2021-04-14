@@ -22,7 +22,17 @@ export default function TimerModal() {
     <div className={isDarkMode ? "timer-modal" : "timer-modal light"}>
       {/* Components are displayed here */}
       <div className="timer-modal__info">
-        <Task name={currentTask.Name} subTasks={currentTask.Subtasks} />
+        <Task
+          description={currentTask.Description}
+          endDate={currentTask.End_date}
+          label={currentTask.Label}
+          name={currentTask.Name}
+          startDate={currentTask.Start_date}
+          taskId={currentTask.Task_id}
+          userId={currentTask.User_id}
+          checked={currentTask.Is_complete}
+          subTasks={currentTask.Subtasks}
+        />
         <CurrentTaskNotes notes={[currentTask.Description]} />
       </div>
       <div className="timer-modal__timer">

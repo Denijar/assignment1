@@ -22,7 +22,14 @@ function TaskList(props) {
           {tasks.map((t) => (
             <div key={t.Task_id}>
               <Task
+                description={t.Description}
+                endDate={t.End_date}
+                label={t.Label}
                 name={t.Name}
+                startDate={t.Start_date}
+                taskId={t.Task_id}
+                userId={t.User_id}
+                checked={t.Is_complete}
                 onClick={() => onTaskClick(t)}
                 selected={currentTask && t.Task_id === currentTask.Task_id}
               />

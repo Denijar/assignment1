@@ -114,8 +114,15 @@ function CurrentTask() {
           ) : (
             <div className="current-task__info">
               <Task
-                expanded
+                description={currentTask.Description}
+                endDate={currentTask.End_date}
+                label={currentTask.Label}
                 name={currentTask.Name}
+                startDate={currentTask.Start_date}
+                taskId={currentTask.Task_id}
+                userId={currentTask.User_id}
+                checked={currentTask.Is_complete}
+                expanded
                 subtasks={currentTask.Subtasks}
               />
               <CurrentTaskNotes
